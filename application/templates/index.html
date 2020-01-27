@@ -1,0 +1,30 @@
+{% extends "layout.html" %}
+
+{% block content %}
+    <div class="row">
+        <div class="col-md-12 text-center">
+            <h1>Welcome to Universal Tech Academy.</h1>
+
+            {% if session['username'] %}
+                <h3>Let's get started.</h3>
+            {% else %}
+                <p>Already registered? <a href="{{url_for('login') }}">Login</a></p>
+            {% endif %}
+
+            <div style="text-align: left;">
+                <h2> What is UTA all about?</h2>
+
+                <p>
+                    Universal Tech University is a private research university in California. 
+                    UTA is known for its academic achievements, wealth, close proximity to Silicon Valley, and selectivity; it ranks as one of the world's top universities.
+                </p>
+                <p>
+                    The university is organized around three traditional schools consisting of 40 academic departments at the undergraduate and graduate level and four professional schools that focus on graduate programs in law, medicine, education, and business. 
+                    Students compete in 36 varsity sports, and the university is one of two private institutions in the Division I FBS Pac-12 Conference. It has gained 126 NCAA team championships, and UTA has won the NACDA Directors' Cup for 24 consecutive years, beginning in 1994–1995. 
+                    In addition, UTA students and alumni have won 270 Olympic medals including 139 gold medals.
+                </p>
+            </div>
+
+        </div>
+    </div>
+{% endblock %}
